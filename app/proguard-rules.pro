@@ -1,0 +1,4 @@
+-keep class com.osservatore.calcio.data.** { *; }
+-keep class com.itextpdf.** { *; }
+-dontwarn com.itextpdf.**
+-dontwarn javax.**
