@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="@color/green_dark" app:titleTextColor="@android:color/white"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="4dp"
+                app:strokeColor="@color/green_dark" app:strokeWidth="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp"
+                    android:background="@color/green_light">
+                    <TextView android:id="@+id/tvName" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textStyle="bold"
+                        android:textSize="22sp" android:textColor="@color/green_dark"/>
+                    <TextView android:id="@+id/tvRuolo" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="15sp"
+                        android:textColor="@color/gray" android:layout_marginTop="4dp"/>
+                    <TextView android:id="@+id/tvSocieta" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="14sp"
+                        android:textColor="@color/gray"/>
+                    <!-- Score complessivo -->
+                    <TextView android:id="@+id/tvScoreComplessivo" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="36sp"
+                        android:textStyle="bold" android:gravity="center"
+                        android:textColor="@color/green_dark" android:layout_marginTop="12dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="SCORE COMPLESSIVO / 4" android:gravity="center"
+                        android:textColor="@color/gray" android:textSize="11sp"/>
+                    <!-- Score grid -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginTop="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreTecnica" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:textStyle="bold"
+                                android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Tecnica" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreTattica" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:textStyle="bold"
+                                android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Tattica" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreCoord" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:textStyle="bold"
+                                android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Coord." android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreFisiche" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:textStyle="bold"
+                                android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Fisiche" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreMentali" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:textStyle="bold"
+                                android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Mentali" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreSocial" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:textStyle="bold"
+                                android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Social" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="👤 ANAGRAFICA" android:textStyle="bold"
+                        android:textColor="@color/green_dark" android:textSize="13sp" android:layout_marginBottom="6dp"/>
+                    <TextView android:id="@+id/tvNazionalita" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDataNascita" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvLuogoNascita" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvAltezzaPeso" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvPiede" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvStato" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvStagione" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvStats" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="13sp"
+                        android:layout_marginTop="4dp" android:textStyle="bold"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="📝 NOTE" android:textStyle="bold"
+                        android:textColor="@color/green_dark" android:textSize="13sp" android:layout_marginBottom="6dp"/>
+                    <TextView android:id="@+id/tvNote" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvTags" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:textSize="12sp"
+                        android:textColor="@color/green_dark" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button android:id="@+id/btnPdf" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="16dp"
+                android:text="📄 Esporta PDF Scheda"
+                android:backgroundTint="@color/green_dark" android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
