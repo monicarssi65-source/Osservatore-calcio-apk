@@ -35,11 +35,11 @@ class TeamFormActivity : AppCompatActivity() {
         b.spDifesa.adapter = spinnerAdapter(listOf("4 in linea", "3 in linea", "Zona", "Uomo a uomo", "Mista"))
         b.spAttacco.adapter = spinnerAdapter(listOf("2 punte", "1 punta", "Falso 9", "3 attaccanti"))
 
-        b.btnSave.setOnClickListener { save() }
-        b.btnReset.setOnClickListener { resetForm() }
         b.btnLavagna.setOnClickListener {
             startActivity(Intent(this, TacticalBoardActivity::class.java))
         }
+        b.btnReset.setOnClickListener { resetForm() }
+        b.btnSave.setOnClickListener { save() }
     }
 
     private fun save() {
@@ -48,7 +48,6 @@ class TeamFormActivity : AppCompatActivity() {
             Toast.makeText(this, "⚠️ Inserisci il nome della squadra!", Toast.LENGTH_SHORT).show()
             return
         }
-
         val team = Team(
             id = UUID.randomUUID().toString(),
             nome = nome,
@@ -63,9 +62,8 @@ class TeamFormActivity : AppCompatActivity() {
             criticita = b.etCriticita.text.toString().trim(),
             note = b.etNote.text.toString().trim()
         )
-
         vm.saveTeam(team)
-        Toast.makeText(this, "✅ Squadra ${nome} salvata!", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "✅ Squadra $nome salvata!", Toast.LENGTH_SHORT).show()
         finish()
     }
 
