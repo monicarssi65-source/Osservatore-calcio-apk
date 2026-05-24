@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="@color/green_dark" app:titleTextColor="@android:color/white"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+
+            <!-- Anagrafica -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="👤 DATI ANAGRAFICI" android:textStyle="bold"
+                        android:textColor="@color/green_dark" android:textSize="14sp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Cognome *" android:layout_marginEnd="4dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCognome"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Nome *" android:layout_marginStart="4dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etNome"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginTop="6dp">
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Data Nascita" android:layout_marginEnd="4dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etDataNascita"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:hint="AAAA-MM-GG"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Luogo Nascita" android:layout_marginStart="4dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etLuogoNascita"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Nazionalità" android:textSize="12sp" android:textColor="@color/gray"
+                        android:layout_marginTop="8dp"/>
+                    <Spinner android:id="@+id/spNazionalita" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_marginBottom="6dp"/>
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Ruolo *" android:textSize="12sp" android:textColor="@color/gray"/>
+                    <Spinner android:id="@+id/spRuolo" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_marginBottom="6dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="4dp">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:text="Piede" android:textSize="12sp" android:textColor="@color/gray"/>
+                            <Spinner android:id="@+id/spPiede" android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="4dp">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:text="Stato" android:textSize="12sp" android:textColor="@color/gray"/>
+                            <Spinner android:id="@+id/spStato" android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:hint="Società" android:layout_marginTop="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSocieta"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:hint="Luogo Rilevazione" android:layout_marginTop="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etLuogoRil"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginTop="6dp">
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Altezza (cm)" android:layout_marginEnd="4dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAltezza"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="number"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Peso (kg)" android:layout_marginStart="4dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPeso"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="number"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Morfologia" android:textSize="12sp" android:textColor="@color/gray"
+                        android:layout_marginTop="8dp"/>
+                    <Spinner android:id="@+id/spMorfologia" android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Statistiche -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="📊 STATISTICHE" android:textStyle="bold"
+                        android:textColor="@color/green_dark" android:textSize="14sp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Stagione" android:textSize="12sp" android:textColor="@color/gray"/>
+                    <Spinner android:id="@+id/spStagione" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_marginBottom="6dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Presenze" android:layout_marginEnd="3dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPresenze"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="number" android:text="0"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Gol" android:layout_marginStart="3dp" android:layout_marginEnd="3dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etGol"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="number" android:text="0"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Assist" android:layout_marginStart="3dp" android:layout_marginEnd="3dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAssist"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="number" android:text="0"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Minuti" android:layout_marginStart="3dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etMinuti"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="number" android:text="0"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Score Summary -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp"
+                    android:background="@color/green_light">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="📈 SCORE COMPLESSIVO" android:textStyle="bold"
+                        android:textColor="@color/green_dark" android:textSize="14sp"
+                        android:layout_marginBottom="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreTecnica" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="3.00"
+                                android:textStyle="bold" android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Tec" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreTattica" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="3.00"
+                                android:textStyle="bold" android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Tat" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreCoord" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="3.00"
+                                android:textStyle="bold" android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Cor" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreFisiche" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="3.00"
+                                android:textStyle="bold" android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Fis" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreMentali" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="3.00"
+                                android:textStyle="bold" android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Men" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvScoreSocial" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="3.00"
+                                android:textStyle="bold" android:textColor="@color/green_dark"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Soc" android:textSize="10sp" android:textColor="@color/gray"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvScoreComplessivo"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="3.00" android:textSize="32sp" android:textStyle="bold"
+                        android:gravity="center" android:textColor="@color/green_dark"
+                        android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="SCORE COMPLESSIVO / 4" android:gravity="center"
+                        android:textColor="@color/gray" android:textSize="11sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Eval Sections -->
+            <com.osservatore.calcio.ui.EvalSectionView android:id="@+id/evalTecnica"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+            <com.osservatore.calcio.ui.EvalSectionView android:id="@+id/evalTattica"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+            <com.osservatore.calcio.ui.EvalSectionView android:id="@+id/evalCoord"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+            <com.osservatore.calcio.ui.EvalSectionView android:id="@+id/evalFisiche"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+            <com.osservatore.calcio.ui.EvalSectionView android:id="@+id/evalMentali"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+            <com.osservatore.calcio.ui.EvalSectionView android:id="@+id/evalSocial"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Infortuni -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="🏥 INFORTUNI" android:textStyle="bold"
+                        android:textColor="@color/green_dark" android:textSize="14sp"
+                        android:layout_marginBottom="10dp"/>
+                    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:hint="Tipo infortunio"
+                        android:layout_marginBottom="8dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etInfortunio"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="4dp">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:text="Gravità" android:textSize="12sp" android:textColor="@color/gray"/>
+                            <Spinner android:id="@+id/spGravita" android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Giorni stop" android:layout_marginStart="4dp">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etGiorniStop"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="number" android:text="0"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Note e Tags -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:hint="📝 Note"
+                        android:layout_marginBottom="8dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etNote"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:minLines="3"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:hint="🏷️ Tags (separati da virgola)">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etTags"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Buttons -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="16dp">
+                <Button android:id="@+id/btnReset"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="6dp"
+                    android:text="🔄 Reset"/>
+                <Button android:id="@+id/btnSave"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="2" android:layout_marginStart="6dp"
+                    android:text="💾 Salva Giocatore"
+                    android:backgroundTint="@color/green_dark"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
