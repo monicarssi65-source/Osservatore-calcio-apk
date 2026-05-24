@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:layout_marginBottom="4dp"
+    android:gravity="center_vertical">
+
+    <TextView android:id="@+id/tvTipo"
+        android:layout_width="28dp" android:layout_height="28dp"
+        android:gravity="center" android:textColor="@android:color/white"
+        android:textSize="11sp" android:textStyle="bold"
+        android:text="T"/>
+
+    <EditText android:id="@+id/etNumero"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:hint="N."
+        android:inputType="number" android:layout_marginStart="4dp"
+        android:padding="6dp"/>
+
+    <EditText android:id="@+id/etNome"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="4" android:hint="Nome Giocatore"
+        android:layout_marginStart="4dp" android:padding="6dp"/>
+
+    <ImageButton android:id="@+id/btnRemove"
+        android:layout_width="32dp" android:layout_height="32dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginStart="4dp"/>
+</LinearLayout>
