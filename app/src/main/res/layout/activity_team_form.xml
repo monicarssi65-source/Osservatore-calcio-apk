@@ -12,46 +12,41 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:orientation="vertical" android:padding="12dp">
+
+            <!-- Dati Squadra -->
             <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:layout_marginBottom="8dp"
                 app:cardCornerRadius="10dp" app:cardElevation="3dp">
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:orientation="vertical" android:padding="14dp">
-
                     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                         android:text="🏟️ DATI SQUADRA" android:textStyle="bold"
                         android:textColor="@color/green_dark" android:textSize="14sp"
                         android:layout_marginBottom="10dp"/>
-
                     <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:hint="Nome Squadra *"
                         android:layout_marginBottom="8dp">
                         <com.google.android.material.textfield.TextInputEditText android:id="@+id/etNome"
                             android:layout_width="match_parent" android:layout_height="wrap_content"/>
                     </com.google.android.material.textfield.TextInputLayout>
-
                     <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:hint="Allenatore"
                         android:layout_marginBottom="8dp">
                         <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAllenatore"
                             android:layout_width="match_parent" android:layout_height="wrap_content"/>
                     </com.google.android.material.textfield.TextInputLayout>
-
                     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                         android:text="Campionato" android:textSize="12sp" android:textColor="@color/gray"/>
                     <Spinner android:id="@+id/spCampionato" android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:layout_marginBottom="8dp"/>
-
                     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                         android:text="Modulo" android:textSize="12sp" android:textColor="@color/gray"/>
                     <Spinner android:id="@+id/spModulo" android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:layout_marginBottom="8dp"/>
-
                     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                         android:text="Tipo di Gioco" android:textSize="12sp" android:textColor="@color/gray"/>
                     <Spinner android:id="@+id/spTipoGioco" android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:layout_marginBottom="8dp"/>
-
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                         android:orientation="horizontal" android:layout_marginBottom="8dp">
                         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
@@ -69,12 +64,10 @@
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
                     </LinearLayout>
-
                     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                         android:text="Attacco" android:textSize="12sp" android:textColor="@color/gray"/>
                     <Spinner android:id="@+id/spAttacco" android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:layout_marginBottom="8dp"/>
-
                     <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:hint="💪 Punti di Forza"
                         android:layout_marginBottom="8dp">
@@ -82,7 +75,6 @@
                             android:layout_width="match_parent" android:layout_height="wrap_content"
                             android:minLines="2"/>
                     </com.google.android.material.textfield.TextInputLayout>
-
                     <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:hint="⚠️ Criticità"
                         android:layout_marginBottom="8dp">
@@ -90,41 +82,78 @@
                             android:layout_width="match_parent" android:layout_height="wrap_content"
                             android:minLines="2"/>
                     </com.google.android.material.textfield.TextInputLayout>
-
                     <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:hint="📝 Note"
-                        android:layout_marginBottom="16dp">
+                        android:layout_marginBottom="8dp">
                         <com.google.android.material.textfield.TextInputEditText android:id="@+id/etNote"
                             android:layout_width="match_parent" android:layout_height="wrap_content"
                             android:minLines="3"/>
                     </com.google.android.material.textfield.TextInputLayout>
-
-                    <!-- Lavagna Tattica -->
-                    <Button android:id="@+id/btnLavagna"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="🎨 Apri Lavagna Tattica"
-                        android:backgroundTint="#1565C0"
-                        android:textColor="@android:color/white"
-                        android:layout_marginBottom="12dp"/>
-
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <Button android:id="@+id/btnReset"
-                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                            android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="1" android:layout_marginEnd="6dp"
-                            android:text="🔄 Reset"/>
-                        <Button android:id="@+id/btnSave"
-                            android:layout_width="0dp" android:layout_height="wrap_content"
-                            android:layout_weight="2" android:layout_marginStart="6dp"
-                            android:text="💾 Salva Squadra"
-                            android:backgroundTint="@color/green_dark"
-                            android:textColor="@android:color/white"/>
-                    </LinearLayout>
-
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <!-- Rosa Giocatori -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="👕 ROSA GIOCATORI"
+                            android:textStyle="bold" android:textColor="@color/green_dark"
+                            android:textSize="14sp"/>
+                        <Button android:id="@+id/btnLavagna"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🎨 Lavagna" android:backgroundTint="#1565C0"
+                            android:textColor="@android:color/white" android:textSize="11sp"/>
+                    </LinearLayout>
+
+                    <!-- Legenda -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="6dp">
+                        <TextView android:layout_width="28dp" android:layout_height="wrap_content"
+                            android:text="T/R" android:textSize="10sp" android:textColor="@color/gray"
+                            android:gravity="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="N."
+                            android:textSize="10sp" android:textColor="@color/gray"
+                            android:layout_marginStart="4dp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="4" android:text="Nome Giocatore"
+                            android:textSize="10sp" android:textColor="@color/gray"
+                            android:layout_marginStart="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/containerFormazione"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical"/>
+
+                    <Button android:id="@+id/btnAddGiocatore"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="➕ Aggiungi Giocatore" android:layout_marginTop="8dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Bottoni -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="16dp">
+                <Button android:id="@+id/btnReset"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="6dp"
+                    android:text="🔄 Reset"/>
+                <Button android:id="@+id/btnSave"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="2" android:layout_marginStart="6dp"
+                    android:text="💾 Salva Squadra"
+                    android:backgroundTint="@color/green_dark"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
